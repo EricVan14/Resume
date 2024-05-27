@@ -6,6 +6,8 @@ import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
+import ParallaxSection from '../components/ParallaxSection';
+import image from '../assets/pics/arsenalAVIF.avif';
 
 const skills = [
   'Java', 'Machine learning algorithms', 'Python', 'HTML', 'CSS', 'SQL',
@@ -17,20 +19,24 @@ const skills = [
 
 const Skills = () => {
   return (
-    <Container>
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h4" component="h1" gutterBottom>
+    <>
+      <ParallaxSection image={image}>
+        <Typography variant="h2" component="h1">
           Skills
         </Typography>
-        <List>
-          {skills.map((skill, index) => (
-            <ListItem key={index}>
-              <ListItemText primary={skill} />
-            </ListItem>
-          ))}
-        </List>
-      </Box>
-    </Container>
+        <Container>
+            <Box sx={{ my: 4 }}>
+            <List>
+                {skills.map((skill, index) => (
+                <ListItem key={index}>
+                    <ListItemText primary={skill} />
+                </ListItem>
+                ))}
+            </List>
+            </Box>
+        </Container>
+      </ParallaxSection>
+    </>
   );
 };
 

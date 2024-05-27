@@ -3,16 +3,26 @@ import React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import ParallaxSection from '../components/ParallaxSection';
+import image from '../assets/pics/arsenalAVIF.avif';
 
 const About = () => {
   return (
-    <Container>
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h4" component="h1" gutterBottom>
+    <>
+      <ParallaxSection image={image}>
+        <Typography variant="h2" component="h1">
           About Me
         </Typography>
-      </Box>
-    </Container>
+        <Container>
+            <Box sx={{ my: 4 }}>
+            <Typography variant="body1" component="p">
+
+            </Typography>
+            </Box>
+        </Container>
+      </ParallaxSection>
+      
+    </>
   );
 };
 
