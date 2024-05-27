@@ -1,27 +1,26 @@
 // src/components/ParallaxSection.js
 import React from 'react';
-import { Parallax } from 'react-parallax';
 import Box from '@mui/material/Box';
 
 const ParallaxSection = ({ image, children }) => {
   return (
-    <Parallax bgImage={image} strength={500}>
-      <Box
-        sx={{
-          height: '100vh',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          color: 'white',
-          textAlign: 'center',
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
-          padding: '20px',
-        }}
-      >
-        {children}
-      </Box>
-    </Parallax>
+    <Box
+      sx={{
+        backgroundImage: `url(${image})`,
+        backgroundAttachment: 'fixed',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingTop: '64px', // Ensure padding to accommodate the fixed navbar
+        paddingBottom: '64px', // Extra padding at the bottom
+      }}
+    >
+      {children}
+    </Box>
   );
 };
 
