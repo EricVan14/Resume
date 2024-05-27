@@ -1,31 +1,53 @@
+// src/pages/Contact.js
 import React from 'react';
-import styled from 'styled-components';
-
-const Container = styled.div`
-  padding: 2rem;
-  text-align: center;
-`;
-
-const Title = styled.h2`
-  font-size: 2rem;
-  color: #333;
-`;
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 const Contact = () => {
   return (
     <Container>
-        <Title>Contact</Title>
-        <p>Email: <a href="mailto:eric.vandelande@gmail.com">eric.vandelande@gmail.com</a></p>
-        <p>Phone: 519-635-3681</p>
-        <form action="mailto:eric.vandelande@gmail.com" method="post" enctype="text/plain">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-        <button type="submit">Send</button>
-        </form>
+      <Box sx={{ my: 4 }}>
+        <Typography variant="h4" component="h1" gutterBottom>
+          Contact
+        </Typography>
+        <Typography variant="body1" component="p" gutterBottom>
+          Email: <a href="mailto:eric.vandelande@gmail.com">eric.vandelande@gmail.com</a>
+        </Typography>
+        <Typography variant="body1" component="p" gutterBottom>
+          Phone: 519-635-3681
+        </Typography>
+        <Box component="form" sx={{ mt: 2 }} noValidate autoComplete="off">
+          <TextField
+            id="name"
+            label="Name"
+            variant="outlined"
+            fullWidth
+            sx={{ mb: 2 }}
+          />
+          <TextField
+            id="email"
+            label="Email"
+            variant="outlined"
+            fullWidth
+            sx={{ mb: 2 }}
+          />
+          <TextField
+            id="message"
+            label="Message"
+            variant="outlined"
+            multiline
+            rows={4}
+            fullWidth
+            sx={{ mb: 2 }}
+          />
+          <Button variant="contained" color="primary" type="submit">
+            Send
+          </Button>
+        </Box>
+      </Box>
     </Container>
   );
 };

@@ -1,34 +1,24 @@
 // src/pages/Home.js
 import React from 'react';
-import styled from 'styled-components';
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-`;
-
-const Title = styled.h1`
-  font-size: 2.5rem;
-  color: #333;
-`;
-
-const Link = styled.a`
-  color: #007bff;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-`;
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
 
 const Home = () => {
   return (
     <Container>
-      <Title>Eric Van de Lande</Title>
-      <p>Software Developer</p>
-      <p>GitHub: <Link href="https://github.com/EricVan14">EricVan14</Link></p>
+      <Box sx={{ my: 4 }}>
+        <Typography variant="h4" component="h1" gutterBottom>
+          Eric Van de Lande
+        </Typography>
+        <Typography variant="h6" component="p" gutterBottom>
+          Software Developer
+        </Typography>
+        <Typography variant="body1" component="p" gutterBottom>
+          GitHub: <Link href="https://github.com/EricVan14" target="_blank">EricVan14</Link>
+        </Typography>
+      </Box>
     </Container>
   );
 };

@@ -1,33 +1,36 @@
+// src/pages/Experience.js
 import React from 'react';
-import styled from 'styled-components';
-
-const Container = styled.div`
-  padding: 2rem;
-  text-align: center;
-`;
-
-const Title = styled.h2`
-  font-size: 2rem;
-  color: #333;
-`;
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import Divider from '@mui/material/Divider';
 
 const Experience = () => {
   return (
     <Container>
-        <Title>Experience</Title>
-        <h3>SaskPower – Regina, Saskatchewan (in office), 2023</h3>
+      <Box sx={{ my: 4 }}>
+        <Typography variant="h4" component="h1" gutterBottom>
+          Experience
+        </Typography>
+        <Typography variant="h6" component="p" gutterBottom>
+          SaskPower – Regina, Saskatchewan (in office), 2023
+        </Typography>
         <ul>
           <li>Analyzed, designed, and developed applications using the latest technologies.</li>
           <li>Application UI design, JSON data modelling, bug fixing, and problem solving.</li>
           <li>Collaborative development using Git and Azure DevOps.</li>
           <li>Gathered functional requirements from external and/or internal customers and end-users.</li>
         </ul>
-        <h3>Metal Pros - Ottawa, Ontario, 2021-2022</h3>
+        <Divider sx={{ my: 2 }} />
+        <Typography variant="h6" component="p" gutterBottom>
+          Metal Pros - Ottawa, Ontario, 2021-2022
+        </Typography>
         <ul>
           <li>Prepared and organized shipments and orders in a fast-paced, ever-changing environment.</li>
           <li>Demonstrated advanced problem-solving, teamwork, and efficiency skills.</li>
           <li>Planned organization strategies for a new facility.</li>
         </ul>
+      </Box>
     </Container>
   );
 };
