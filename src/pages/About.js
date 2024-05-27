@@ -1,4 +1,3 @@
-// src/pages/About.js
 import React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
@@ -10,18 +9,17 @@ const About = () => {
   return (
     <>
       <ParallaxSection image={image}>
-        <Typography variant="h2" component="h1">
+        <Typography variant="h2" component="h1" sx={{ color: 'white', textAlign: 'center', mb: 4 }}>
           About Me
         </Typography>
         <Container>
-            <Box sx={{ my: 4 }}>
-            <Typography variant="body1" component="p">
-
+          <Box sx={{ my: 4 }}>
+            <Typography variant="body1" component="p" sx={{ color: 'white' }}>
+              {/* Add your content here */}
             </Typography>
-            </Box>
+          </Box>
         </Container>
       </ParallaxSection>
-      
     </>
   );
 };

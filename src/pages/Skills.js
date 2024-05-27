@@ -2,20 +2,10 @@ import React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
 import ParallaxSection from '../components/ParallaxSection';
 import image from '../assets/pics/arsenalAVIF.avif';
 import tierListImage from '../assets/pics/tierlist.png';
 
-const skills = [
-  'Java', 'Machine learning algorithms', 'Python', 'HTML', 'CSS', 'SQL',
-  'Data staging, data analytics, and data mining', 'Windows based applications',
-  'Node.js', 'Junit testing', 'Azure DevOps', 'Multi-threaded programming',
-  'Info Retrieval using large language models', 'Android Studio', 'JavaScript',
-  'C++', 'TypeScript', 'Angular', 'React', 'PostgreSQL', 'Software Architecture'
-];
 
 const skillDescriptions = [
   "Java: Expertise in object-oriented programming, developing scalable and maintainable applications.",
@@ -45,7 +35,7 @@ const Skills = () => {
     <>
       <ParallaxSection image={image}>
         <Container>
-          <Typography variant="h2" component="h1" sx={{ pt: 10, pb: 4 }}>
+          <Typography variant="h2" component="h1" sx={{ pt: 10, pb: 4, color: 'white', textAlign: 'center' }}>
             Skills Tier List
           </Typography>
           <Box sx={{ my: 4 }}>
@@ -54,7 +44,7 @@ const Skills = () => {
               sx={{
                 mt: 4, 
                 width: '100%', 
-                maxWidth: 1000, 
+                maxWidth: 900, 
                 mx: 'auto', 
                 display: 'block',
                 mb: 4 
@@ -64,7 +54,7 @@ const Skills = () => {
             />
             <Box sx={{ mt: 4 }}>
               {skillDescriptions.map((description, index) => (
-                <Typography key={index} variant="body1" paragraph sx={{ mb: 2 }}>
+                <Typography key={index} variant="body1" paragraph sx={{ mb: 2, color: 'white' }}>
                   {description}
                 </Typography>
               ))}

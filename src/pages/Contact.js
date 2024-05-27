@@ -1,4 +1,3 @@
-// src/pages/Contact.js
 import React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
@@ -12,7 +11,7 @@ const Contact = () => {
   return (
     <>
       <ParallaxSection image={image}>
-        <Typography variant="h2" component="h1">
+        <Typography variant="h2" component="h1" sx={{ color: 'white', textAlign: 'center', mb: 4 }}>
           Contact
         </Typography>
         <Container
@@ -21,7 +20,8 @@ const Contact = () => {
             borderRadius: '8px',
             padding: '20px',
             mt: 4,
-            width: '50%',
+            maxWidth: '600px',
+            width: '100%',
           }}
         >
           <Box sx={{ my: 4 }}>
