@@ -27,7 +27,7 @@ const Home = () => {
   return (
     <Container>
       <Title>Eric Van de Lande</Title>
-      <p>Professional Developer and Cloud Specialist</p>
+      <p>Software Developer</p>
       <p>GitHub: <Link href="https://github.com/EricVan14">EricVan14</Link></p>
     </Container>
   );

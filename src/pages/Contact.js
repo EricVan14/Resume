@@ -16,7 +16,6 @@ const Contact = () => {
     <Container>
         <Title>Contact</Title>
         <p>Email: <a href="mailto:eric.vandelande@gmail.com">eric.vandelande@gmail.com</a></p>
-        <p>Address: 89 Nepean St. Ottawa, Ontario</p>
         <p>Phone: 519-635-3681</p>
         <form action="mailto:eric.vandelande@gmail.com" method="post" enctype="text/plain">
         <label for="name">Name:</label>
