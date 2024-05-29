@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import ParallaxSection from '../components/ParallaxSection';
 import image from '../assets/pics/arsenalAVIF.avif';
-import profilePic from '../assets/pics/Profile.jfif';
+import profilePic from '../assets/pics/Profile.png';
 import muiLogo from '../assets/logos/mui.png';
 import nodelogo from '../assets/logos/nodejs.png';
 import reactLogo from '../assets/logos/react.png';
@@ -21,7 +21,7 @@ const Home = () => {
             Eric Van de Lande
           </Typography>
           <Typography variant="h5" component="p" sx={{ fontSize: { xs: '1rem', md: '2rem' }, mb: 2 }}>
-            Professional Developer and Cloud Specialist
+            Developer 
           </Typography>
           <Typography variant="body1" component="p" sx={{ mb: 4 }}>
             GitHub: <Link href="https://github.com/EricVan14" target="_blank" color="inherit">EricVan14</Link>
