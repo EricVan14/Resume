@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -16,13 +16,13 @@ import githubImage from '../assets/skills/GITHUB.png';
 import cssImage from '../assets/skills/CSS.png';
 import aiImage from '../assets/skills/AI.jpg';
 import sqlImage from '../assets/skills/SQL.png';
-import nodejsImage from '../assets/skills/NODEJS.png';
+import nodejsImage from '../assets/skills/njs.png';
 import postgresImage from '../assets/skills/POSTGRES.jfif';
 import jsonImage from '../assets/skills/json.png';
 import azureDevopsImage from '../assets/skills/azure.png';
 import dataMiningImage from '../assets/skills/datamining.png';
-import typescriptImage from '../assets/skills/TYPESCRIPT.png';
-import androidStudioImage from '../assets/skills/ANDROIDSTUDIO.png';
+import typescriptImage from '../assets/skills/ts.png';
+import androidStudioImage from '../assets/skills/as.jfif';
 import angularImage from '../assets/skills/ANGULAR.png';
 import cppImage from '../assets/skills/CPLUSPLUS.png';
 import xmlImage from '../assets/skills/xml.png';
@@ -293,45 +293,68 @@ const Skills = () => {
           <Typography variant="h6" component="p" sx={{ pt: 2, color: 'white', textAlign: 'center' }}>
             Try clicking on a skill to see more information about my experience with it.
           </Typography>
-          <Box ref={tierListRef} sx={{ my: 4, backgroundColor: 'dimgray', padding: '10px', borderRadius: '8px', position: 'relative' }}>
-            {tierList.map((tier, tierIndex) => (
-              <Box key={tierIndex} sx={{ display: 'flex', alignItems: 'center', marginBottom: '20px', backgroundColor: 'dimgray', borderBottom: '2px solid #333', flexWrap: 'wrap' }}>
+          <Box ref={tierListRef} sx={{ 
+  my: 4, 
+  backgroundColor: 'dimgray', 
+  padding: '10px', 
+  borderRadius: '8px', 
+  position: 'relative',
+  border: '2px solid black' // Added border
+}}>
+  {tierList.map((tier, tierIndex) => (
+    <Box key={tierIndex} sx={{ 
+      display: 'flex', 
+      alignItems: 'center', 
+      marginBottom: '20px', 
+      backgroundColor: 'dimgray', 
+      borderBottom: '2px solid #333', 
+      flexWrap: 'wrap',
+      paddingBottom: '10px' // Added padding to separate from bottom border
+    }}>
+      <Box
+            sx={{
+              width: { xs: 80, sm: 100 }, // Adjust the width based on screen size
+              height: { xs: 80, sm: 100 }, // Adjust the height based on screen size
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              backgroundColor: tier.color,
+              marginRight: '10px',
+              color: 'white',
+              fontWeight: 'bold',
+              textAlign: 'center',
+              marginBottom: '10px' // Added margin to separate from images
+            }}
+          >
+            {tier.label}
+          </Box>
+          <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+            {tier.skills.map((skillIndex) => (
+              <Box
+                key={skillIndex}
+                className="skill-box"
+                sx={{ 
+                  width: { xs: 80, sm: 100 }, 
+                  height: { xs: 80, sm: 100 }, 
+                  cursor: 'pointer', 
+                  position: 'relative',
+                  marginBottom: '10px', // Added margin to separate from bottom border
+                  marginTop: '10px' // Added margin to separate from top border
+                }}
+                onClick={() => handleClick(skillIndex)}
+              >
                 <Box
-                  sx={{
-                    width: { xs: 80, sm: 100 }, // Adjust the width based on screen size
-                    height: { xs: 80, sm: 100 }, // Adjust the height based on screen size
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    backgroundColor: tier.color,
-                    marginRight: '10px',
-                    color: 'white',
-                    fontWeight: 'bold',
-                    textAlign: 'center'
-                  }}
-                >
-                  {tier.label}
-                </Box>
-                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
-                  {tier.skills.map((skillIndex) => (
-                    <Box
-                      key={skillIndex}
-                      className="skill-box"
-                      sx={{ width: { xs: 80, sm: 100 }, height: { xs: 80, sm: 100 }, cursor: 'pointer', position: 'relative' }}
-                      onClick={() => handleClick(skillIndex)}
-                    >
-                      <Box
-                        component="img"
-                        sx={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                        src={skillData[skillIndex].image}
-                        alt={skillData[skillIndex].title}
-                      />
-                    </Box>
-                  ))}
-                </Box>
+                  component="img"
+                  sx={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  src={skillData[skillIndex].image}
+                  alt={skillData[skillIndex].title}
+                />
               </Box>
             ))}
           </Box>
+        </Box>
+      ))}
+    </Box>
         </Container>
       </ParallaxSection>
     </>
