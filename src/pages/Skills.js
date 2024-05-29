@@ -35,6 +35,7 @@ import rImage from '../assets/skills/r.jfif';
 import kubernetesImage from '../assets/skills/kubernetes.png';
 import dockerImage from '../assets/skills/docker.png';
 import dotnetImage from '../assets/skills/NET.png';
+import wiresharkImage from '../assets/skills/wireshark.jfif';
 import vuejsImage from '../assets/skills/vue.png';
 import rubyOnRailsImage from '../assets/skills/rr.png';
 import awsImage from '../assets/skills/aws.jfif';
@@ -204,6 +205,12 @@ const skillData = [
     places: ["Workplace H"]
   },
   { 
+    title: "Wireshark", 
+    description: "Experienced in packet captures using wireshark", 
+    image: wiresharkImage, 
+    places: ["Personal Projects", "Workplace I"]
+  },
+  { 
     title: ".NET", 
     description: "Experienced in developing applications using the .NET framework.", 
     image: dotnetImage, 
@@ -238,8 +245,8 @@ const tierList = [
   { label: "Wizard", color: "blue", skills: [0, 1, 2, 3, 4] },
   { label: "Skilled", color: "green", skills: [5, 6, 7, 8, 9, 10, 11, 12] },
   { label: "I'm Good", color: "greenyellow", skills: [13, 14, 15, 16, 17, 18, 19] },
-  { label: "Some Experience", color: "darkgoldenrod", skills: [20, 21, 22, 23, 24, 25, 26] },
-  { label: "Next to Learn", color: "darkmagenta", skills: [27, 28, 29] },
+  { label: "Some Experience", color: "darkgoldenrod", skills: [20, 21, 22, 23, 24, 25, 26, 27, 29] },
+  { label: "Next to Learn", color: "darkmagenta", skills: [28, 30, 31, 32] },
 ];
 
 const Skills = () => {

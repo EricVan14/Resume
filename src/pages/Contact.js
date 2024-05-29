@@ -11,24 +11,24 @@ const Contact = () => {
   return (
     <>
       <ParallaxSection image={image}>
-        <Typography variant="h2" component="h1" sx={{ color: 'white', textAlign: 'center', mb: 4 }}>
+        <Typography variant="h2" component="h1" sx={{ color: 'white', textAlign: 'center', mb: 4, fontSize: { xs: '2rem', md: '3rem' } }}>
           Contact
         </Typography>
         <Container
           sx={{
-            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+            backgroundColor: 'rgba(255, 255, 255, 0.4)',
             borderRadius: '8px',
-            padding: '20px',
+            padding: { xs: '10px', md: '20px' },
             mt: 4,
             maxWidth: '600px',
             width: '100%',
           }}
         >
-          <Box sx={{ my: 4 }}>
-            <Typography variant="body1" component="p" gutterBottom>
+          <Box sx={{ my: 4}}>
+            <Typography variant="body1" component="p" gutterBottom sx={{ fontSize: { xs: '1rem', md: '1.25rem' } }}>
               Email: <a href="mailto:eric.vandelande@gmail.com">eric.vandelande@gmail.com</a>
             </Typography>
-            <Typography variant="body1" component="p" gutterBottom>
+            <Typography variant="body1" component="p" gutterBottom sx={{ fontSize: { xs: '1rem', md: '1.25rem' } }}>
               Phone: 519-635-3681
             </Typography>
             <Box component="form" sx={{ mt: 2 }} noValidate autoComplete="off">
@@ -37,14 +37,14 @@ const Contact = () => {
                 label="Name"
                 variant="outlined"
                 fullWidth
-                sx={{ mb: 2, backgroundColor: 'white' }}
+                sx={{ mb: 2, backgroundColor: 'white', fontSize: { xs: '1rem', md: '1.25rem' } }}
               />
               <TextField
                 id="email"
                 label="Email"
                 variant="outlined"
                 fullWidth
-                sx={{ mb: 2, backgroundColor: 'white' }}
+                sx={{ mb: 2, backgroundColor: 'white', fontSize: { xs: '1rem', md: '1.25rem' } }}
               />
               <TextField
                 id="message"
@@ -53,9 +53,9 @@ const Contact = () => {
                 multiline
                 rows={4}
                 fullWidth
-                sx={{ mb: 2, backgroundColor: 'white' }}
+                sx={{ mb: 2, backgroundColor: 'white', fontSize: { xs: '1rem', md: '1.25rem' } }}
               />
-              <Button variant="contained" color="primary" type="submit">
+              <Button variant="contained" color="primary" type="submit" sx={{ fontSize: { xs: '1rem', md: '1.25rem' } }}>
                 Send
               </Button>
             </Box>
