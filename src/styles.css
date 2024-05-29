@@ -1,0 +1,84 @@
+/* styles.css */
+.skill-box {
+    transition: transform 0.3s ease;
+}
+
+.skill-box:hover {
+    transform: scale(1.1);
+}
+
+.fancybox__container {
+    z-index: 9999;
+}
+
+.fancybox-custom .fancybox__container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 12px;
+    padding: 40px;
+    width: 600px;
+    max-width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.fancybox-custom h2 {
+    margin-top: 0;
+    font-size: 28px;
+    color: #333;
+  }
+  
+  .fancybox-custom p {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .fancybox-custom h3 {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .fancybox-custom ul {
+    font-size: 16px;
+    color: #666;
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .fancybox-custom button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  @keyframes flash {
+    0%, 50%, 100% {
+      opacity: 1;
+    }
+    25%, 75% {
+      opacity: 0;
+    }
+  }
+  
+  .click-me {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: yellow;
+    padding: 10px;
+    border-radius: 5px;
+    animation: flash 1s infinite;
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+    z-index: 1000;
+  }
+  
+  

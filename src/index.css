@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.animatedOut {
+  animation: bounceOut 1s;
+}
+
+.skill-box {
+  transition: transform 0.3s ease;
+}
+
+.skill-box:hover {
+  transform: scale(1.1);
+}
+
