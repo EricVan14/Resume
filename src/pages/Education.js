@@ -5,7 +5,56 @@ import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
 import ParallaxSection from '../components/ParallaxSection';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
 import image from '../assets/pics/arsenalAVIF.avif';
+
+const EducationCard = ({ title, period, institution, courses, showCourses, setShowCourses, link }) => {
+  return (
+    <Card sx={{ mb: 4, bgcolor: 'rgba(0, 0, 0, 0.5)', color: 'white', backdropFilter: 'blur(5px)' }}>
+      <CardContent>
+        <Box sx={{ bgcolor: 'rgba(255, 255, 255, 0.2)', p: 2, borderRadius: 2, backdropFilter: 'blur(5px)' }}>
+          <Typography variant="h6" component="p" gutterBottom id={link}>
+            {title}
+          </Typography>
+        </Box>
+        <Typography variant="body2" component="p" gutterBottom sx={{ mt: 2 }}>
+          {period}
+          <br />
+          {institution}
+        </Typography>
+        {courses && (
+          <>
+            <Button
+              onClick={setShowCourses}
+              sx={{
+                mb: 2,
+                color: 'white',
+                backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                backdropFilter: 'blur(5px)',
+                fontSize: { xs: '0.75rem', md: '1rem' },
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.3)',
+                },
+              }}
+            >
+              {showCourses ? 'Hide Courses' : 'Show Courses'}
+            </Button>
+            {showCourses && (
+              <Box sx={{ color: 'white', pl: 2 }}>
+                {courses.map((course, index) => (
+                  <Typography key={index} variant="body2" component="p">
+                    {course}
+                  </Typography>
+                ))}
+              </Box>
+            )}
+          </>
+        )}
+      </CardContent>
+    </Card>
+  );
+};
 
 const Education = () => {
   const [showChemCourses, setShowChemCourses] = useState(false);
@@ -88,125 +137,33 @@ const Education = () => {
         </Typography>
         <Container>
           <Box sx={{ my: 4 }}>
-            <Typography
-              variant="h6"
-              component="p"
-              gutterBottom
-              sx={{
-                color: 'white',
-                fontSize: { xs: '1.25rem', md: '1.5rem' },
-              }}
-            >
-              Bachelor of Science, Major in Computer Science
-            </Typography>
-            <Typography
-              variant="body1"
-              component="p"
-              gutterBottom
-              sx={{
-                color: 'white',
-                fontSize: { xs: '1rem', md: '1.25rem' },
-              }}
-            >
-              2021 - 2024<br />
-              University of Ottawa – Faculty of Engineering, Ottawa, Ontario
-            </Typography>
-            <Button
-              onClick={() => setShowCompCourses(!showCompCourses)}
-              sx={{
-                mb: 2,
-                color: 'white',
-                backgroundColor: 'rgba(255, 255, 255, 0.2)',
-                backdropFilter: 'blur(5px)',
-                fontSize: { xs: '0.75rem', md: '1rem' },
-                '&:hover': {
-                  backgroundColor: 'rgba(255, 255, 255, 0.3)',
-                },
-              }}
-            >
-              {showCompCourses ? 'Hide Courses' : 'Show Courses'}
-            </Button>
-            {showCompCourses && (
-              <Box sx={{ color: 'white', pl: 2 }}>
-                {computerCourses.map((course, index) => (
-                  <Typography key={index} variant="body2" component="p">
-                    {course}
-                  </Typography>
-                ))}
-              </Box>
-            )}
+            <EducationCard
+              title="Bachelor of Science, Major in Computer Science"
+              period="2021 - 2024"
+              link="bsc"
+              institution="University of Ottawa – Faculty of Engineering, Ottawa, Ontario"
+              courses={computerCourses}
+              showCourses={showCompCourses}
+              setShowCourses={() => setShowCompCourses(!showCompCourses)}
+            />
             <Divider sx={{ my: 2, borderColor: 'white' }} />
-            <Typography
-              variant="h6"
-              component="p"
-              gutterBottom
-              sx={{
-                color: 'white',
-                fontSize: { xs: '1.25rem', md: '1.5rem' },
-              }}
-            >
-              Bachelor of Engineering, Major in Chemical Engineering (to Year 3A)
-            </Typography>
-            <Typography
-              variant="body1"
-              component="p"
-              gutterBottom
-              sx={{
-                color: 'white',
-                fontSize: { xs: '1rem', md: '1.25rem' },
-              }}
-            >
-              2018 - 2021<br />
-              University of Ottawa – Faculty of Engineering, Ottawa, Ontario
-            </Typography>
-            <Button
-              onClick={() => setShowChemCourses(!showChemCourses)}
-              sx={{
-                mb: 2,
-                color: 'white',
-                backgroundColor: 'rgba(255, 255, 255, 0.2)',
-                backdropFilter: 'blur(5px)',
-                fontSize: { xs: '0.75rem', md: '1rem' },
-                '&:hover': {
-                  backgroundColor: 'rgba(255, 255, 255, 0.3)',
-                },
-              }}
-            >
-              {showChemCourses ? 'Hide Courses' : 'Show Courses'}
-            </Button>
-            {showChemCourses && (
-              <Box sx={{ color: 'white', pl: 2 }}>
-                {chemicalCourses.map((course, index) => (
-                  <Typography key={index} variant="body2" component="p">
-                    {course}
-                  </Typography>
-                ))}
-              </Box>
-            )}
+            <EducationCard
+              title="Bachelor of Engineering, Major in Chemical Engineering (to Year 3A)"
+              period="2018 - 2021"
+              institution="University of Ottawa – Faculty of Engineering, Ottawa, Ontario"
+              courses={chemicalCourses}
+              showCourses={showChemCourses}
+              setShowCourses={() => setShowChemCourses(!showChemCourses)}
+            />
             <Divider sx={{ my: 2, borderColor: 'white' }} />
-            <Typography
-              variant="h6"
-              component="p"
-              gutterBottom
-              sx={{
-                color: 'white',
-                fontSize: { xs: '1.25rem', md: '1.5rem' },
-              }}
-            >
-              Sir John A. Macdonald Secondary School – Waterloo, Ontario
-            </Typography>
-            <Typography
-              variant="body1"
-              component="p"
-              gutterBottom
-              sx={{
-                color: 'white',
-                fontSize: { xs: '1rem', md: '1.25rem' },
-              }}
-            >
-              2014 - 2018<br />
-              AP Program (advanced placement)
-            </Typography>
+            <EducationCard
+              title="Sir John A. Macdonald Secondary School – Waterloo, Ontario"
+              period="2014 - 2018"
+              institution="AP Program (advanced placement)"
+              courses={null}
+              showCourses={false}
+              setShowCourses={null}
+            />
           </Box>
         </Container>
       </ParallaxSection>

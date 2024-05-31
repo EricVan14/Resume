@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from 'react';
+import ReactDOM from 'react-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -44,203 +46,301 @@ import mongoDBImage from '../assets/skills/mongo.png';
 const skillData = [
   { 
     title: "React", 
-    description: "Skilled in building user interfaces with React.", 
+    description: "Skilled in building user interfaces with React. Used in personal projects, at SaskPower, and for various school assignments.", 
     image: reactImage, 
-    places: ["Personal Projects", "Workplace A", "School"]
+    places: [
+      { name: "SaskPower", link: "/experience#saskpower" },
+      { name: "School Assignments", link: "/education#bsc" }
+    ]
   },
   { 
     title: "Java", 
-    description: "Expertise in object-oriented programming, developing scalable and maintainable applications.", 
+    description: "Expertise in object-oriented programming, developing scalable and maintainable applications. Used extensively at SaskPower, in the Course Booking App, FUT Draft App, and for school assignments.", 
     image: javaImage, 
-    places: ["Workplace B", "School"]
+    places: [
+      { name: "SaskPower", link: "/experience#saskpower" },
+      { name: "Course Booking App", link: "/projects#course-booking-app" },
+      { name: "FUT Draft App", link: "/projects#fut-draft-app" },
+      { name: "School Assignments", link: "/education#bsc" }
+    ]
   },
   { 
     title: "JavaScript", 
-    description: "Proficient in adding interactive elements to web pages.", 
+    description: "Proficient in adding interactive elements to web pages. Used at SaskPower, in the E-Hotels Web App, Honours Project, and for school assignments.", 
     image: jsImage, 
-    places: ["Personal Projects", "Workplace A", "School"]
+    places: [
+      { name: "SaskPower", link: "/experience#saskpower" },
+      { name: "E-Hotels Web App", link: "/projects#e-hotels-web-app" },
+      { name: "Honours Project", link: "/projects#honours-project" },
+      { name: "School Assignments", link: "/education#bsc" }
+    ]
   },
   { 
     title: "HTML", 
-    description: "Proficient in building responsive and interactive web pages.", 
+    description: "Proficient in building responsive and interactive web pages. Used at SaskPower, in the E-Hotels Web App, Honours Project, and for school assignments.", 
     image: htmlImage, 
-    places: ["Personal Projects", "School"]
+    places: [
+      { name: "SaskPower", link: "/experience#saskpower" },
+      { name: "E-Hotels Web App", link: "/projects#e-hotels-web-app" },
+      { name: "Honours Project", link: "/projects#honours-project" },
+      { name: "School Assignments", link: "/education#bsc" }
+    ]
   },
   { 
     title: "Python", 
-    description: "Skilled in scripting, automation, and data analysis using Python's extensive libraries.", 
+    description: "Skilled in scripting, automation, and data analysis using Python's extensive libraries. Used in the Honours Project, Data Mining Project, Simulation Project, and for school assignments.", 
     image: pythonImage, 
-    places: ["Personal Projects", "Workplace C", "School"]
+    places: [
+      { name: "Honours Project", link: "/projects#honours-project" },
+      { name: "Data Mining Project", link: "/projects#data-mining-project" },
+      { name: "Simulation Project", link: "/projects#simulation-project" },
+      { name: "School Assignments", link: "/education#bsc" }
+    ]
   },
   { 
     title: "GitHub", 
-    description: "Proficient in using GitHub for version control and collaboration.", 
+    description: "Proficient in using GitHub for version control and collaboration. Used at SaskPower, in the E-Hotels Web App, Honours Project, and Data Mining Project.", 
     image: githubImage, 
-    places: ["Personal Projects", "Workplace A", "Workplace B"]
+    places: [
+      { name: "SaskPower", link: "/experience#saskpower" },
+      { name: "E-Hotels Web App", link: "/projects#e-hotels-web-app" },
+      { name: "Honours Project", link: "/projects#honours-project" },
+      { name: "Data Mining Project", link: "/projects#data-mining-project" }
+    ]
   },
   { 
     title: "CSS", 
-    description: "Proficient in building responsive and interactive web pages.", 
+    description: "Proficient in building responsive and interactive web pages. Used at SaskPower, in the E-Hotels Web App, Honours Project, and for school assignments.", 
     image: cssImage, 
-    places: ["Personal Projects", "School"]
+    places: [
+      { name: "SaskPower", link: "/experience#saskpower" },
+      { name: "E-Hotels Web App", link: "/projects#e-hotels-web-app" },
+      { name: "Honours Project", link: "/projects#honours-project" },
+      { name: "School Assignments", link: "/education#bsc" }
+    ]
   },
   { 
     title: "AI", 
-    description: "Proficient in designing and implementing algorithms for predictive analytics and data-driven insights.", 
+    description: "Proficient in designing and implementing algorithms for predictive analytics and data-driven insights. Used in the Honours Project and for school assignments.", 
     image: aiImage, 
-    places: ["Personal Projects", "Workplace D"]
+    places: [
+      { name: "Honours Project", link: "/projects#honours-project" },
+      { name: "School Assignments", link: "/education#bsc" }
+    ]
   },
   { 
     title: "SQL", 
-    description: "Experienced in database design, querying, and data manipulation.", 
+    description: "Experienced in database design, querying, and data manipulation. Used in the E-Hotels Web App, Course Booking App, Data Mining Project, and for school assignments.", 
     image: sqlImage, 
-    places: ["Personal Projects", "Workplace E", "School"]
+    places: [
+      { name: "E-Hotels Web App", link: "/projects#e-hotels-web-app" },
+      { name: "Course Booking App", link: "/projects#course-booking-app" },
+      { name: "Data Mining Project", link: "/projects#data-mining-project" },
+      { name: "School Assignments", link: "/education#bsc" }
+    ]
   },
   { 
     title: "Node.js", 
-    description: "Proficient in building server-side applications and APIs.", 
+    description: "Proficient in building server-side applications and APIs. Used at SaskPower, in the E-Hotels Web App, and Honours Project.", 
     image: nodejsImage, 
-    places: ["Personal Projects", "Workplace A"]
+    places: [
+      { name: "SaskPower", link: "/experience#saskpower" },
+      { name: "E-Hotels Web App", link: "/projects#e-hotels-web-app" },
+      { name: "Honours Project", link: "/projects#honours-project" }
+    ]
   },
   { 
     title: "PostgreSQL", 
-    description: "Experienced in using PostgreSQL for relational database management.", 
+    description: "Experienced in using PostgreSQL for relational database management. Used in the E-Hotels Web App, Course Booking App, Data Mining Project, and for school assignments.", 
     image: postgresImage, 
-    places: ["Personal Projects", "Workplace E"]
+    places: [
+      { name: "E-Hotels Web App", link: "/projects#e-hotels-web-app" },
+      { name: "Course Booking App", link: "/projects#course-booking-app" },
+      { name: "Data Mining Project", link: "/projects#data-mining-project" },
+      { name: "School Assignments", link: "/education#bsc" }
+    ]
   },
   { 
     title: "JSON", 
-    description: "Proficient in working with JSON for data exchange.", 
+    description: "Proficient in working with JSON for data exchange. Used at SaskPower, in the Honours Project, Course Booking App, and for school assignments.", 
     image: jsonImage, 
-    places: ["Personal Projects", "Workplace A", "School"]
+    places: [
+      { name: "SaskPower", link: "/experience#saskpower" },
+      { name: "Honours Project", link: "/projects#honours-project" },
+      { name: "Course Booking App", link: "/projects#course-booking-app" },
+      { name: "School Assignments", link: "/education#bsc" }
+    ]
   },
   { 
     title: "Azure DevOps", 
-    description: "Skilled in using Azure DevOps for CI/CD pipelines and project management.", 
+    description: "Skilled in using Azure DevOps for CI/CD pipelines and project management. Used at SaskPower.", 
     image: azureDevopsImage, 
-    places: ["Workplace F"]
+    places: [
+      { name: "SaskPower", link: "/experience#saskpower" }
+    ]
   },
   { 
     title: "Data Mining", 
-    description: "Expertise in processing and analyzing large datasets for actionable insights.", 
+    description: "Expertise in processing and analyzing large datasets for actionable insights. Used in the Data Mining Project and for school assignments.", 
     image: dataMiningImage, 
-    places: ["Personal Projects", "Workplace G"]
+    places: [
+      { name: "Data Mining Project", link: "/projects#data-mining-project" },
+      { name: "School Assignments", link: "/education#bsc" }
+    ]
   },
   { 
     title: "TypeScript", 
-    description: "Skilled in building type-safe applications with TypeScript.", 
+    description: "Skilled in building type-safe applications with TypeScript. Used at SaskPower.", 
     image: typescriptImage, 
-    places: ["Personal Projects", "Workplace A"]
+    places: [
+      { name: "SaskPower", link: "/experience#saskpower" }
+    ]
   },
   { 
     title: "Android Studio", 
-    description: "Skilled in developing native Android applications.", 
+    description: "Skilled in developing native Android applications. Used in the Course Booking App, FUT Draft App, and for school assignments.", 
     image: androidStudioImage, 
-    places: ["Personal Projects", "School"]
+    places: [
+      { name: "Course Booking App", link: "/projects#course-booking-app" },
+      { name: "FUT Draft App", link: "/projects#fut-draft-app" },
+      { name: "School Assignments", link: "/education#bsc" }
+    ]
   },
   { 
     title: "Angular", 
-    description: "Proficient in developing dynamic web applications using Angular.", 
+    description: "Proficient in developing dynamic web applications using Angular. Used at SaskPower and for school assignments.", 
     image: angularImage, 
-    places: ["Personal Projects", "Workplace A"]
+    places: [
+      { name: "SaskPower", link: "/experience#saskpower" },
+      { name: "School Assignments", link: "/education#bsc" }
+    ]
   },
   { 
     title: "C++", 
-    description: "Experienced in system programming and performance-critical applications.", 
+    description: "Experienced in system programming and performance-critical applications. Used for school assignments.", 
     image: cppImage, 
-    places: ["Personal Projects", "School"]
+    places: [
+      { name: "School Assignments", link: "/education#bsc" }
+    ]
   },
   { 
     title: "XML", 
-    description: "Proficient in working with XML for data representation.", 
+    description: "Proficient in working with XML for data representation. Used for school assignments.", 
     image: xmlImage, 
-    places: ["Personal Projects", "Workplace A", "School"]
+    places: [
+      { name: "School Assignments", link: "/education#bsc" }
+    ]
   },
   { 
     title: "Go", 
-    description: "Proficient in building applications with Go.", 
+    description: "Proficient in building applications with Go. Used for school assignments.", 
     image: goImage, 
-    places: ["Personal Projects"]
+    places: [
+      { name: "School Assignments", link: "/education#bsc" }
+    ]
   },
   { 
     title: "Spring Boot", 
-    description: "Skilled in developing applications using Spring Boot.", 
+    description: "Skilled in developing applications using Spring Boot. Used for school assignments.", 
     image: springbootImage, 
-    places: ["Personal Projects", "Workplace B"]
+    places: [
+      { name: "School Assignments", link: "/education#bsc" }
+    ]
   },
   { 
     title: "PHP", 
-    description: "Experienced in building dynamic web applications using PHP.", 
+    description: "Experienced in building dynamic web applications using PHP. Used for school assignments.", 
     image: phpImage, 
-    places: ["Personal Projects", "School"]
+    places: [
+      { name: "School Assignments", link: "/education#bsc" }
+    ]
   },
   { 
     title: "AJAX", 
-    description: "Proficient in using AJAX for asynchronous web development.", 
+    description: "Proficient in using AJAX for asynchronous web development. Used for school assignments.", 
     image: ajaxImage, 
-    places: ["Personal Projects", "School"]
+    places: [
+      { name: "School Assignments", link: "/education#bsc" }
+    ]
   },
   { 
     title: "C", 
-    description: "Experienced in system programming and low-level application development.", 
+    description: "Experienced in system programming and low-level application development. Used for school assignments.", 
     image: cImage, 
-    places: ["Personal Projects", "School"]
+    places: [
+      { name: "School Assignments", link: "/education#bsc" }
+    ]
   },
   { 
     title: "R", 
-    description: "Skilled in statistical computing and graphics using R.", 
+    description: "Skilled in statistical computing and graphics using R. Used for school assignments.", 
     image: rImage, 
-    places: ["Personal Projects", "School"]
+    places: [
+      { name: "School Assignments", link: "/education#bsc" }
+    ]
   },
   { 
     title: "Kubernetes", 
-    description: "Proficient in using Kubernetes for container orchestration.", 
+    description: "Proficient in using Kubernetes for container orchestration. Used for school assignments.", 
     image: kubernetesImage, 
-    places: ["Workplace H"]
+    places: [
+      { name: "School Assignments", link: "/education#bsc" }
+    ]
   },
   { 
     title: "Docker", 
-    description: "Skilled in using Docker for containerization.", 
+    description: "Skilled in using Docker for containerization. Used for school assignments.", 
     image: dockerImage, 
-    places: ["Workplace H"]
+    places: [
+      { name: "School Assignments", link: "/education#bsc" }
+    ]
   },
   { 
     title: "Wireshark", 
-    description: "Experienced in packet captures using wireshark", 
+    description: "Experienced in packet captures using Wireshark. Used in the Honours Project and for school assignments.", 
     image: wiresharkImage, 
-    places: ["Personal Projects", "Workplace I"]
+    places: [
+      { name: "Honours Project", link: "/projects#honours-project" },
+      { name: "School Assignments", link: "/education#bsc" }
+    ]
   },
   { 
     title: ".NET", 
-    description: "Experienced in developing applications using the .NET framework.", 
+    description: "Experienced in developing applications using the .NET framework. Used for school assignments.", 
     image: dotnetImage, 
-    places: ["Personal Projects", "Workplace I"]
+    places: [
+      { name: "School Assignments", link: "/education#bsc" }
+    ]
   },
   { 
     title: "Vue.js", 
-    description: "Proficient in building user interfaces with Vue.js.", 
+    description: "Proficient in building user interfaces with Vue.js. Used at SaskPower and for school assignments.", 
     image: vuejsImage, 
-    places: ["Personal Projects"]
+    places: [
+      { name: "SaskPower", link: "/experience#saskpower" },
+      { name: "School Assignments", link: "/education#bsc" }
+    ]
   },
   { 
     title: "Ruby on Rails", 
     description: "Skilled in developing applications using Ruby on Rails.", 
     image: rubyOnRailsImage, 
-    places: ["Personal Projects"]
+    places: []
   },
   { 
     title: "AWS", 
     description: "Proficient in using AWS for cloud computing.", 
     image: awsImage, 
-    places: ["Workplace J"]
+    places: []
   },
   { 
     title: "MongoDB", 
     description: "Experienced in using MongoDB for NoSQL database management.", 
     image: mongoDBImage, 
-    places: ["Personal Projects", "Workplace A"]
+    places: []
   }
 ];
+
 const tierList = [
   { label: "Wizard", color: "blue", skills: [0, 1, 2, 3, 4] },
   { label: "Skilled", color: "green", skills: [5, 6, 7, 8, 9, 10, 11, 12] },
@@ -259,7 +359,7 @@ const Skills = () => {
 
   const handleClick = (index) => {
     const skill = skillData[index];
-    const placesList = skill.places.map(place => `<li>${place}</li>`).join('');
+    const placesList = skill.places.map(place => `<li><a href="${place.link}" onClick="window.Fancybox.close()">${place.name}</a></li>`).join('');
 
     window.Fancybox.show([
       {

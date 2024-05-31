@@ -18,7 +18,7 @@ const Home = () => {
       <ParallaxSection image={image}>
         <Box sx={{ textAlign: 'center', color: 'white', p: { xs: 2, md: 4 } }}>
           <Typography variant="h2" component="h1" sx={{ fontSize: { xs: '2rem', md: '4rem' } }}>
-            Eric Van de Lande
+            Eric van de Lande
           </Typography>
           <Typography variant="h5" component="p" sx={{ fontSize: { xs: '1rem', md: '2rem' }, mb: 2 }}>
             Developer 
