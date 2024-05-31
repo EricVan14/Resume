@@ -49,8 +49,8 @@ const skillData = [
     description: "Skilled in building user interfaces with React. Used in personal projects, at SaskPower, and for various school assignments.",
     image: reactImage,
     places: [
-      { name: "SaskPower", link: "/experience#saskpower" },
-      { name: "School Assignments", link: "/education#bsc" }
+      { name: "SaskPower", link: "/Resume/#/experience" },
+      { name: "School Assignments", link: "/Resume/#/education" }
     ]
   },
   {
@@ -58,10 +58,10 @@ const skillData = [
     description: "Expertise in object-oriented programming, developing scalable and maintainable applications. Used extensively at SaskPower, in the Course Booking App, FUT Draft App, and for school assignments.",
     image: javaImage,
     places: [
-      { name: "SaskPower", link: "/experience#saskpower" },
-      { name: "Course Booking App", link: "/projects#course-booking-app" },
-      { name: "FUT Draft App", link: "/projects#fut-draft-app" },
-      { name: "School Assignments", link: "/education#bsc" }
+      { name: "SaskPower", link: "/Resume/#/experience" },
+      { name: "Course Booking App", link: "/Resume/#/projects" },
+      { name: "FUT Draft App", link: "/Resume/#/projects" },
+      { name: "School Assignments", link: "/Resume/#/education" }
     ]
   },
   {
@@ -69,10 +69,10 @@ const skillData = [
     description: "Proficient in adding interactive elements to web pages. Used at SaskPower, in the E-Hotels Web App, Honours Project, and for school assignments.",
     image: jsImage,
     places: [
-      { name: "SaskPower", link: "/experience#saskpower" },
-      { name: "E-Hotels Web App", link: "/projects#e-hotels-web-app" },
-      { name: "Honours Project", link: "/projects#honours-project" },
-      { name: "School Assignments", link: "/education#bsc" }
+      { name: "SaskPower", link: "/Resume/#/experience" },
+      { name: "E-Hotels Web App", link: "/Resume/#/projects" },
+      { name: "Honours Project", link: "/Resume/#/projects" },
+      { name: "School Assignments", link: "/Resume/#/education" }
     ]
   },
   {
@@ -80,10 +80,10 @@ const skillData = [
     description: "Proficient in building responsive and interactive web pages. Used at SaskPower, in the E-Hotels Web App, Honours Project, and for school assignments.",
     image: htmlImage,
     places: [
-      { name: "SaskPower", link: "/experience#saskpower" },
-      { name: "E-Hotels Web App", link: "/projects#e-hotels-web-app" },
-      { name: "Honours Project", link: "/projects#honours-project" },
-      { name: "School Assignments", link: "/education#bsc" }
+      { name: "SaskPower", link: "/Resume/#/experience" },
+      { name: "E-Hotels Web App", link: "/Resume/#/projects" },
+      { name: "Honours Project", link: "/Resume/#/projects" },
+      { name: "School Assignments", link: "/Resume/#/education" }
     ]
   },
   {
@@ -91,10 +91,10 @@ const skillData = [
     description: "Skilled in scripting, automation, and data analysis using Python's extensive libraries. Used in the Honours Project, Data Mining Project, Simulation Project, and for school assignments.",
     image: pythonImage,
     places: [
-      { name: "Honours Project", link: "/projects#honours-project" },
-      { name: "Data Mining Project", link: "/projects#data-mining-project" },
-      { name: "Simulation Project", link: "/projects#simulation-project" },
-      { name: "School Assignments", link: "/education#bsc" }
+      { name: "Honours Project", link: "/Resume/#/projects" },
+      { name: "Data Mining Project", link: "/Resume/#/projects" },
+      { name: "Simulation Project", link: "/Resume/#/projects" },
+      { name: "School Assignments", link: "/Resume/#/education" }
     ]
   },
   {
@@ -102,10 +102,10 @@ const skillData = [
     description: "Proficient in using GitHub for version control and collaboration. Used at SaskPower, in the E-Hotels Web App, Honours Project, and Data Mining Project.",
     image: githubImage,
     places: [
-      { name: "SaskPower", link: "/experience#saskpower" },
-      { name: "E-Hotels Web App", link: "/projects#e-hotels-web-app" },
-      { name: "Honours Project", link: "/projects#honours-project" },
-      { name: "Data Mining Project", link: "/projects#data-mining-project" }
+      { name: "SaskPower", link: "/Resume/#/experience" },
+      { name: "E-Hotels Web App", link: "/Resume/#/projects" },
+      { name: "Honours Project", link: "/Resume/#/projects" },
+      { name: "Data Mining Project", link: "/Resume/#/projects" }
     ]
   },
   {
@@ -113,10 +113,10 @@ const skillData = [
     description: "Proficient in building responsive and interactive web pages. Used at SaskPower, in the E-Hotels Web App, Honours Project, and for school assignments.",
     image: cssImage,
     places: [
-      { name: "SaskPower", link: "/experience#saskpower" },
-      { name: "E-Hotels Web App", link: "/projects#e-hotels-web-app" },
-      { name: "Honours Project", link: "/projects#honours-project" },
-      { name: "School Assignments", link: "/education#bsc" }
+      { name: "SaskPower", link: "/Resume/#/experience" },
+      { name: "E-Hotels Web App", link: "/Resume/#/projects" },
+      { name: "Honours Project", link: "/Resume/#/projects" },
+      { name: "School Assignments", link: "/Resume/#/education" }
     ]
   },
   {
@@ -124,8 +124,8 @@ const skillData = [
     description: "Proficient in designing and implementing algorithms for predictive analytics and data-driven insights. Used in the Honours Project and for school assignments.",
     image: aiImage,
     places: [
-      { name: "Honours Project", link: "/projects#honours-project" },
-      { name: "School Assignments", link: "/education#bsc" }
+      { name: "Honours Project", link: "/Resume/#/projects" },
+      { name: "School Assignments", link: "/Resume/#/education" }
     ]
   },
   {
@@ -133,10 +133,10 @@ const skillData = [
     description: "Experienced in database design, querying, and data manipulation. Used in the E-Hotels Web App, Course Booking App, Data Mining Project, and for school assignments.",
     image: sqlImage,
     places: [
-      { name: "E-Hotels Web App", link: "/projects#e-hotels-web-app" },
-      { name: "Course Booking App", link: "/projects#course-booking-app" },
-      { name: "Data Mining Project", link: "/projects#data-mining-project" },
-      { name: "School Assignments", link: "/education#bsc" }
+      { name: "E-Hotels Web App", link: "/Resume/#/projects" },
+      { name: "Course Booking App", link: "/Resume/#/projects" },
+      { name: "Data Mining Project", link: "/Resume/#/projects" },
+      { name: "School Assignments", link: "/Resume/#/education" }
     ]
   },
   {
@@ -144,9 +144,9 @@ const skillData = [
     description: "Proficient in building server-side applications and APIs. Used at SaskPower, in the E-Hotels Web App, and Honours Project.",
     image: nodejsImage,
     places: [
-      { name: "SaskPower", link: "/experience#saskpower" },
-      { name: "E-Hotels Web App", link: "/projects#e-hotels-web-app" },
-      { name: "Honours Project", link: "/projects#honours-project" }
+      { name: "SaskPower", link: "/Resume/#/experience" },
+      { name: "E-Hotels Web App", link: "/Resume/#/projects" },
+      { name: "Honours Project", link: "/Resume/#/projects" }
     ]
   },
   {
@@ -154,10 +154,10 @@ const skillData = [
     description: "Experienced in using PostgreSQL for relational database management. Used in the E-Hotels Web App, Course Booking App, Data Mining Project, and for school assignments.",
     image: postgresImage,
     places: [
-        { name: "E-Hotels Web App", link: "/projects#e-hotels-web-app" },
-        { name: "Course Booking App", link: "/projects#course-booking-app" },
-        { name: "Data Mining Project", link: "/projects#data-mining-project" },
-        { name: "School Assignments", link: "/education#bsc" }
+        { name: "E-Hotels Web App", link: "/Resume/#/projects" },
+        { name: "Course Booking App", link: "/Resume/#/projects" },
+        { name: "Data Mining Project", link: "/Resume/#/projects" },
+        { name: "School Assignments", link: "/Resume/#/education" }
       ]
     },
     {
@@ -165,10 +165,10 @@ const skillData = [
       description: "Proficient in working with JSON for data exchange. Used at SaskPower, in the Honours Project, Course Booking App, and for school assignments.",
       image: jsonImage,
       places: [
-        { name: "SaskPower", link: "/experience#saskpower" },
-        { name: "Honours Project", link: "/projects#honours-project" },
-        { name: "Course Booking App", link: "/projects#course-booking-app" },
-        { name: "School Assignments", link: "/education#bsc" }
+        { name: "SaskPower", link: "/Resume/#/experience" },
+        { name: "Honours Project", link: "/Resume/#/projects" },
+        { name: "Course Booking App", link: "/Resume/#/projects" },
+        { name: "School Assignments", link: "/Resume/#/education" }
       ]
     },
     {
@@ -176,7 +176,7 @@ const skillData = [
       description: "Skilled in using Azure DevOps for CI/CD pipelines and project management. Used at SaskPower.",
       image: azureDevopsImage,
       places: [
-        { name: "SaskPower", link: "/experience#saskpower" }
+        { name: "SaskPower", link: "/Resume/#/experience" }
       ]
     },
     {
@@ -184,8 +184,8 @@ const skillData = [
       description: "Expertise in processing and analyzing large datasets for actionable insights. Used in the Data Mining Project and for school assignments.",
       image: dataMiningImage,
       places: [
-        { name: "Data Mining Project", link: "/projects#data-mining-project" },
-        { name: "School Assignments", link: "/education#bsc" }
+        { name: "Data Mining Project", link: "/Resume/#/projects" },
+        { name: "School Assignments", link: "/Resume/#/education" }
       ]
     },
     {
@@ -193,7 +193,7 @@ const skillData = [
       description: "Skilled in building type-safe applications with TypeScript. Used at SaskPower.",
       image: typescriptImage,
       places: [
-        { name: "SaskPower", link: "/experience#saskpower" }
+        { name: "SaskPower", link: "/Resume/#/experience" }
       ]
     },
     {
@@ -201,9 +201,9 @@ const skillData = [
       description: "Skilled in developing native Android applications. Used in the Course Booking App, FUT Draft App, and for school assignments.",
       image: androidStudioImage,
       places: [
-        { name: "Course Booking App", link: "/projects#course-booking-app" },
-        { name: "FUT Draft App", link: "/projects#fut-draft-app" },
-        { name: "School Assignments", link: "/education#bsc" }
+        { name: "Course Booking App", link: "/Resume/#/projects" },
+        { name: "FUT Draft App", link: "/Resume/#/projects" },
+        { name: "School Assignments", link: "/Resume/#/education" }
       ]
     },
     {
@@ -211,8 +211,8 @@ const skillData = [
       description: "Proficient in developing dynamic web applications using Angular. Used at SaskPower and for school assignments.",
       image: angularImage,
       places: [
-        { name: "SaskPower", link: "/experience#saskpower" },
-        { name: "School Assignments", link: "/education#bsc" }
+        { name: "SaskPower", link: "/Resume/#/experience" },
+        { name: "School Assignments", link: "/Resume/#/education" }
       ]
     },
     {
@@ -220,7 +220,7 @@ const skillData = [
       description: "Experienced in system programming and performance-critical applications. Used for school assignments.",
       image: cppImage,
       places: [
-        { name: "School Assignments", link: "/education#bsc" }
+        { name: "School Assignments", link: "/Resume/#/education" }
       ]
     },
     {
@@ -228,7 +228,7 @@ const skillData = [
       description: "Proficient in working with XML for data representation. Used for school assignments.",
       image: xmlImage,
       places: [
-        { name: "School Assignments", link: "/education#bsc" }
+        { name: "School Assignments", link: "/Resume/#/education" }
       ]
     },
     {
@@ -236,7 +236,7 @@ const skillData = [
       description: "Proficient in building applications with Go. Used for school assignments.",
       image: goImage,
       places: [
-        { name: "School Assignments", link: "/education#bsc" }
+        { name: "School Assignments", link: "/Resume/#/education" }
       ]
     },
     {
@@ -244,7 +244,7 @@ const skillData = [
       description: "Skilled in developing applications using Spring Boot. Used for school assignments.",
       image: springbootImage,
       places: [
-        { name: "School Assignments", link: "/education#bsc" }
+        { name: "School Assignments", link: "/Resume/#/education" }
       ]
     },
     {
@@ -252,7 +252,7 @@ const skillData = [
       description: "Experienced in building dynamic web applications using PHP. Used for school assignments.",
       image: phpImage,
       places: [
-        { name: "School Assignments", link: "/education#bsc" }
+        { name: "School Assignments", link: "/Resume/#/education" }
       ]
     },
     {
@@ -260,7 +260,7 @@ const skillData = [
       description: "Proficient in using AJAX for asynchronous web development. Used for school assignments.",
       image: ajaxImage,
       places: [
-        { name: "School Assignments", link: "/education#bsc" }
+        { name: "School Assignments", link: "/Resume/#/education" }
       ]
     },
     {
@@ -268,7 +268,7 @@ const skillData = [
       description: "Experienced in system programming and low-level application development. Used for school assignments.",
       image: cImage,
       places: [
-        { name: "School Assignments", link: "/education#bsc" }
+        { name: "School Assignments", link: "/Resume/#/education" }
       ]
     },
     {
@@ -276,7 +276,7 @@ const skillData = [
       description: "Skilled in statistical computing and graphics using R. Used for school assignments.",
       image: rImage,
       places: [
-        { name: "School Assignments", link: "/education#bsc" }
+        { name: "School Assignments", link: "/Resume/#/education" }
       ]
     },
     {
@@ -284,7 +284,7 @@ const skillData = [
       description: "Proficient in using Kubernetes for container orchestration. Used for school assignments.",
       image: kubernetesImage,
       places: [
-        { name: "School Assignments", link: "/education#bsc" }
+        { name: "School Assignments", link: "/Resume/#/education" }
       ]
     },
     {
@@ -292,7 +292,7 @@ const skillData = [
       description: "Skilled in using Docker for containerization. Used for school assignments.",
       image: dockerImage,
       places: [
-        { name: "School Assignments", link: "/education#bsc" }
+        { name: "School Assignments", link: "/Resume/#/education" }
       ]
     },
     {
@@ -300,8 +300,8 @@ const skillData = [
       description: "Experienced in packet captures using Wireshark. Used in the Honours Project and for school assignments.",
       image: wiresharkImage,
       places: [
-        { name: "Honours Project", link: "/projects#honours-project" },
-        { name: "School Assignments", link: "/education#bsc" }
+        { name: "Honours Project", link: "/Resume/#/projects" },
+        { name: "School Assignments", link: "/Resume/#/education" }
       ]
     },
     {
@@ -309,7 +309,7 @@ const skillData = [
       description: "Experienced in developing applications using the .NET framework. Used for school assignments.",
       image: dotnetImage,
       places: [
-        { name: "School Assignments", link: "/education#bsc" }
+        { name: "School Assignments", link: "/Resume/#/education" }
       ]
     },
     {
@@ -317,8 +317,8 @@ const skillData = [
       description: "Proficient in building user interfaces with Vue.js. Used at SaskPower and for school assignments.",
       image: vuejsImage,
       places: [
-        { name: "SaskPower", link: "/experience#saskpower" },
-        { name: "School Assignments", link: "/education#bsc" }
+        { name: "SaskPower", link: "/Resume/#/experience" },
+        { name: "School Assignments", link: "/Resume/#/education" }
       ]
     },
     {
@@ -470,4 +470,3 @@ const skillData = [
   };
   
   export default Skills;
-  
