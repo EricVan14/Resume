@@ -18,7 +18,7 @@ const Home = () => {
       <ParallaxSection image={image}>
         <Box sx={{ textAlign: 'center', color: 'white', p: { xs: 2, md: 4 } }}>
           <Typography variant="h2" component="h1" sx={{ fontSize: { xs: '2rem', md: '4rem' } }}>
-            Eric van de Lande
+            Eric van de Lande BSc
           </Typography>
           <Typography variant="h5" component="p" sx={{ fontSize: { xs: '1rem', md: '2rem' }, mb: 2 }}>
             Developer 
@@ -33,15 +33,12 @@ const Home = () => {
               <Typography variant="h4" component="h1" gutterBottom sx={{ fontSize: { xs: '1.5rem', md: '2.5rem' } }}>
                 Welcome to My Portfolio
               </Typography>
-              <Typography variant="body1" component="p" sx={{ fontSize: { xs: '1rem', md: '1.25rem' } }}>
-                This is the home page.
-              </Typography>
             </Box>
             <Box sx={{ width: { xs: '100%', md: '30%' }, textAlign: 'center', mb: { xs: 4, md: 0 } }}>
               <img src={profilePic} alt="Eric Van de Lande" style={{ width: '100%', borderRadius: '50%', maxWidth: '200px' }} />
             </Box>
-            <Box sx={{ width: { xs: '100%', md: '30%' }, textAlign: { xs: 'center', md: 'right' } }}>
-              <Typography variant="h6" component="h2" gutterBottom sx={{ fontSize: { xs: '1.25rem', md: '1.75rem' } }}>
+            <Box sx={{ width: { xs: '100%', md: '30%' }, textAlign: 'center' }}>
+              <Typography variant="h6" component="h2" gutterBottom sx={{ fontSize: { xs: '1rem', md: '1.25rem' } }}>
                 Made With
               </Typography>
               <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: { xs: 'center', md: 'space-around' }, alignItems: 'center' }}>

@@ -50,7 +50,7 @@ const skillData = [
     image: reactImage,
     places: [
       { name: "SaskPower", link: "/Resume/#/experience" },
-      { name: "School Assignments", link: "/Resume/#/education" }
+      { name: "Bachelor of Science, Major in Computer Science", link: "/Resume/#/education" }
     ]
   },
   {
@@ -61,7 +61,7 @@ const skillData = [
       { name: "SaskPower", link: "/Resume/#/experience" },
       { name: "Course Booking App", link: "/Resume/#/projects" },
       { name: "FUT Draft App", link: "/Resume/#/projects" },
-      { name: "School Assignments", link: "/Resume/#/education" }
+      { name: "Bachelor of Science, Major in Computer Science", link: "/Resume/#/education" }
     ]
   },
   {
@@ -72,7 +72,7 @@ const skillData = [
       { name: "SaskPower", link: "/Resume/#/experience" },
       { name: "E-Hotels Web App", link: "/Resume/#/projects" },
       { name: "Honours Project", link: "/Resume/#/projects" },
-      { name: "School Assignments", link: "/Resume/#/education" }
+      { name: "Bachelor of Science, Major in Computer Science", link: "/Resume/#/education" }
     ]
   },
   {
@@ -83,7 +83,7 @@ const skillData = [
       { name: "SaskPower", link: "/Resume/#/experience" },
       { name: "E-Hotels Web App", link: "/Resume/#/projects" },
       { name: "Honours Project", link: "/Resume/#/projects" },
-      { name: "School Assignments", link: "/Resume/#/education" }
+      { name: "Bachelor of Science, Major in Computer Science", link: "/Resume/#/education" }
     ]
   },
   {
@@ -94,7 +94,7 @@ const skillData = [
       { name: "Honours Project", link: "/Resume/#/projects" },
       { name: "Data Mining Project", link: "/Resume/#/projects" },
       { name: "Simulation Project", link: "/Resume/#/projects" },
-      { name: "School Assignments", link: "/Resume/#/education" }
+      { name: "Bachelor of Science, Major in Computer Science", link: "/Resume/#/education" }
     ]
   },
   {
@@ -116,7 +116,7 @@ const skillData = [
       { name: "SaskPower", link: "/Resume/#/experience" },
       { name: "E-Hotels Web App", link: "/Resume/#/projects" },
       { name: "Honours Project", link: "/Resume/#/projects" },
-      { name: "School Assignments", link: "/Resume/#/education" }
+      { name: "Bachelor of Science, Major in Computer Science", link: "/Resume/#/education" }
     ]
   },
   {
@@ -125,7 +125,7 @@ const skillData = [
     image: aiImage,
     places: [
       { name: "Honours Project", link: "/Resume/#/projects" },
-      { name: "School Assignments", link: "/Resume/#/education" }
+      { name: "Bachelor of Science, Major in Computer Science", link: "/Resume/#/education" }
     ]
   },
   {
@@ -136,7 +136,7 @@ const skillData = [
       { name: "E-Hotels Web App", link: "/Resume/#/projects" },
       { name: "Course Booking App", link: "/Resume/#/projects" },
       { name: "Data Mining Project", link: "/Resume/#/projects" },
-      { name: "School Assignments", link: "/Resume/#/education" }
+      { name: "Bachelor of Science, Major in Computer Science", link: "/Resume/#/education" }
     ]
   },
   {
@@ -157,7 +157,7 @@ const skillData = [
         { name: "E-Hotels Web App", link: "/Resume/#/projects" },
         { name: "Course Booking App", link: "/Resume/#/projects" },
         { name: "Data Mining Project", link: "/Resume/#/projects" },
-        { name: "School Assignments", link: "/Resume/#/education" }
+        { name: "Bachelor of Science, Major in Computer Science", link: "/Resume/#/education" }
       ]
     },
     {
@@ -168,7 +168,7 @@ const skillData = [
         { name: "SaskPower", link: "/Resume/#/experience" },
         { name: "Honours Project", link: "/Resume/#/projects" },
         { name: "Course Booking App", link: "/Resume/#/projects" },
-        { name: "School Assignments", link: "/Resume/#/education" }
+        { name: "Bachelor of Science, Major in Computer Science", link: "/Resume/#/education" }
       ]
     },
     {
@@ -185,7 +185,7 @@ const skillData = [
       image: dataMiningImage,
       places: [
         { name: "Data Mining Project", link: "/Resume/#/projects" },
-        { name: "School Assignments", link: "/Resume/#/education" }
+        { name: "Bachelor of Science, Major in Computer Science", link: "/Resume/#/education" }
       ]
     },
     {
@@ -203,7 +203,7 @@ const skillData = [
       places: [
         { name: "Course Booking App", link: "/Resume/#/projects" },
         { name: "FUT Draft App", link: "/Resume/#/projects" },
-        { name: "School Assignments", link: "/Resume/#/education" }
+        { name: "Bachelor of Science, Major in Computer Science", link: "/Resume/#/education" }
       ]
     },
     {
@@ -212,7 +212,7 @@ const skillData = [
       image: angularImage,
       places: [
         { name: "SaskPower", link: "/Resume/#/experience" },
-        { name: "School Assignments", link: "/Resume/#/education" }
+        { name: "Bachelor of Science, Major in Computer Science", link: "/Resume/#/education" }
       ]
     },
     {
@@ -220,7 +220,7 @@ const skillData = [
       description: "Experienced in system programming and performance-critical applications. Used for school assignments.",
       image: cppImage,
       places: [
-        { name: "School Assignments", link: "/Resume/#/education" }
+        { name: "Bachelor of Science, Major in Computer Science", link: "/Resume/#/education" }
       ]
     },
     {
@@ -228,7 +228,7 @@ const skillData = [
       description: "Proficient in working with XML for data representation. Used for school assignments.",
       image: xmlImage,
       places: [
-        { name: "School Assignments", link: "/Resume/#/education" }
+        { name: "Bachelor of Science, Major in Computer Science", link: "/Resume/#/education" }
       ]
     },
     {
@@ -236,7 +236,7 @@ const skillData = [
       description: "Proficient in building applications with Go. Used for school assignments.",
       image: goImage,
       places: [
-        { name: "School Assignments", link: "/Resume/#/education" }
+        { name: "Bachelor of Science, Major in Computer Science", link: "/Resume/#/education" }
       ]
     },
     {
@@ -244,7 +244,7 @@ const skillData = [
       description: "Skilled in developing applications using Spring Boot. Used for school assignments.",
       image: springbootImage,
       places: [
-        { name: "School Assignments", link: "/Resume/#/education" }
+        { name: "Bachelor of Science, Major in Computer Science", link: "/Resume/#/education" }
       ]
     },
     {
@@ -252,7 +252,7 @@ const skillData = [
       description: "Experienced in building dynamic web applications using PHP. Used for school assignments.",
       image: phpImage,
       places: [
-        { name: "School Assignments", link: "/Resume/#/education" }
+        { name: "Bachelor of Science, Major in Computer Science", link: "/Resume/#/education" }
       ]
     },
     {
@@ -260,7 +260,7 @@ const skillData = [
       description: "Proficient in using AJAX for asynchronous web development. Used for school assignments.",
       image: ajaxImage,
       places: [
-        { name: "School Assignments", link: "/Resume/#/education" }
+        { name: "Bachelor of Science, Major in Computer Science", link: "/Resume/#/education" }
       ]
     },
     {
@@ -268,7 +268,7 @@ const skillData = [
       description: "Experienced in system programming and low-level application development. Used for school assignments.",
       image: cImage,
       places: [
-        { name: "School Assignments", link: "/Resume/#/education" }
+        { name: "Bachelor of Science, Major in Computer Science", link: "/Resume/#/education" }
       ]
     },
     {
@@ -276,7 +276,7 @@ const skillData = [
       description: "Skilled in statistical computing and graphics using R. Used for school assignments.",
       image: rImage,
       places: [
-        { name: "School Assignments", link: "/Resume/#/education" }
+        { name: "Bachelor of Science, Major in Computer Science", link: "/Resume/#/education" }
       ]
     },
     {
@@ -284,7 +284,7 @@ const skillData = [
       description: "Proficient in using Kubernetes for container orchestration. Used for school assignments.",
       image: kubernetesImage,
       places: [
-        { name: "School Assignments", link: "/Resume/#/education" }
+        { name: "Bachelor of Science, Major in Computer Science", link: "/Resume/#/education" }
       ]
     },
     {
@@ -292,7 +292,7 @@ const skillData = [
       description: "Skilled in using Docker for containerization. Used for school assignments.",
       image: dockerImage,
       places: [
-        { name: "School Assignments", link: "/Resume/#/education" }
+        { name: "Bachelor of Science, Major in Computer Science", link: "/Resume/#/education" }
       ]
     },
     {
@@ -301,7 +301,7 @@ const skillData = [
       image: wiresharkImage,
       places: [
         { name: "Honours Project", link: "/Resume/#/projects" },
-        { name: "School Assignments", link: "/Resume/#/education" }
+        { name: "Bachelor of Science, Major in Computer Science", link: "/Resume/#/education" }
       ]
     },
     {
@@ -309,7 +309,7 @@ const skillData = [
       description: "Experienced in developing applications using the .NET framework. Used for school assignments.",
       image: dotnetImage,
       places: [
-        { name: "School Assignments", link: "/Resume/#/education" }
+        { name: "Bachelor of Science, Major in Computer Science", link: "/Resume/#/education" }
       ]
     },
     {
@@ -318,7 +318,7 @@ const skillData = [
       image: vuejsImage,
       places: [
         { name: "SaskPower", link: "/Resume/#/experience" },
-        { name: "School Assignments", link: "/Resume/#/education" }
+        { name: "Bachelor of Science, Major in Computer Science", link: "/Resume/#/education" }
       ]
     },
     {
