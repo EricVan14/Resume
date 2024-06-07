@@ -343,8 +343,8 @@ const skillData = [
   
   const tierList = [
     { label: "Wizard", color: "blue", skills: [0, 1, 2, 3, 4] },
-    { label: "Skilled", color: "green", skills: [5, 6, 7, 8, 9, 10, 11, 12] },
-    { label: "I'm Good", color: "greenyellow", skills: [13, 14, 15, 16, 17, 18, 19] },
+    { label: "Skilled", color: "teal", skills: [5, 6, 7, 8, 9, 10, 11, 12] },
+    { label: "I'm Good", color: "forestgreen", skills: [13, 14, 15, 16, 17, 18, 19] },
     { label: "Some Experience", color: "darkgoldenrod", skills: [20, 21, 22, 23, 24, 25, 26, 27, 29] },
     { label: "Next to Learn", color: "darkmagenta", skills: [28, 30, 31, 32] }
   ];
