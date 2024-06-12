@@ -11,7 +11,7 @@ import image from '../assets/pics/arsenalAVIF.avif';
 
 const EducationCard = ({ title, period, institution, courses, showCourses, setShowCourses, link }) => {
   return (
-    <Card sx={{ mb: 4, bgcolor: 'rgba(0, 0, 0, 0.5)', color: 'white', backdropFilter: 'blur(5px)' }}>
+    <Card sx={{ mb: 4, bgcolor: 'rgba(0, 0, 0, 0.5)', color: 'white', backdropFilter: 'blur(5px)' , borderRadius: '15px'}}>
       <CardContent>
         <Box sx={{ bgcolor: 'rgba(255, 255, 255, 0.2)', p: 2, borderRadius: 2, backdropFilter: 'blur(5px)' }}>
           <Typography variant="h6" component="p" gutterBottom id={link}>

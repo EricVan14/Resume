@@ -31,9 +31,6 @@ const Navbar = () => {
         <ListItem button component={Link} to="/">
           <ListItemText primary="Home" />
         </ListItem>
-        <ListItem button component={Link} to="/about">
-          <ListItemText primary="About" />
-        </ListItem>
         <ListItem button component={Link} to="/skills">
           <ListItemText primary="Skills" />
         </ListItem>
@@ -87,7 +84,7 @@ const Navbar = () => {
         open={drawerOpen}
         onClose={handleDrawerToggle}
         ModalProps={{
-          keepMounted: true, // Better open performance on mobile.
+          keepMounted: true,
         }}
         sx={{
           '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 240, backgroundColor: '#333', color: 'white' },

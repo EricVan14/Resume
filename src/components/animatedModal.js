@@ -4,7 +4,6 @@ import jQuery from 'jquery';
     $.fn.animatedModal = function(options) {
         var modal = $(this);
 
-        // Defaults
         var settings = $.extend({
             modalTarget: modal.data('target'), 
             position:'fixed', 
