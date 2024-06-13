@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useState  } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
@@ -344,61 +344,29 @@ const skillCategories = [
 ];
 
 const Skills = () => {
-  const tierListRef = useRef(null);
+  const initialSelectedSkills = skillCategories.map(category => skillData[category.skills[0]]);
+  const [selectedSkills, setSelectedSkills] = useState(initialSelectedSkills);
 
-  useEffect(() => {
-    window.Fancybox.bind("[data-fancybox]", {});
-  }, []);
-
-  const handleClick = (index) => {
-    const skill = skillData[index];
-    const placesList = skill.places.map(
-      (place) => `<li><a href="${place.link}" onclick="window.Fancybox.close()">${place.name}</a></li>`
-    ).join('');
-
-    window.Fancybox.show([
-      {
-        src: `
-          <div style="background-color: white; padding: 40px; border: 1px solid #ccc; border-radius: 12px; width: 600px; max-width: 90%; height: auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-            <h2 style="margin-top: 0; font-size: 28px; color: #333;">${skill.title}</h2>
-            <p style="font-size: 18px; color: #666;">${skill.description}</p>
-            <h3 style="font-size: 20px; color: #333;">Places Used:</h3>
-            <ul style="font-size: 16px; color: #666; list-style-type: disc; padding-left: 20px;">
-              ${placesList}
-            </ul>
-            <button onclick="window.Fancybox.close()" style="margin-top: 20px; padding: 10px 20px; font-size: 16px; color: #fff; background-color: #007bff; border: none; border-radius: 4px; cursor: pointer;">Close</button>
-          </div>`,
-        type: "html"
-      }
-    ], {
-      baseClass: "fancybox-custom",
-      afterShow: (fancybox, slide) => {
-        const tierListElement = tierListRef.current;
-        const tierListRect = tierListElement.getBoundingClientRect();
-        const modal = document.querySelector(".fancybox__container");
-        const modalRect = modal.getBoundingClientRect();
-
-        modal.style.top = `${tierListRect.top + window.scrollY + (tierListRect.height / 2) - (modalRect.height / 2)}px`;
-        modal.style.left = `${tierListRect.left + window.scrollX + (tierListRect.width / 2) - (modalRect.width / 2)}px`;
-        modal.style.transform = "none";
-      }
-    });
+  const handleSkillClick = (categoryIndex, skillIndex) => {
+    const newSelectedSkills = [...selectedSkills];
+    newSelectedSkills[categoryIndex] = skillData[skillIndex];
+    setSelectedSkills(newSelectedSkills);
   };
 
   const SamplePrevArrow = (props) => {
     const { className, style, onClick } = props;
-    return(
+    return (
       <div onClick={onClick} className={`arrow ${className}`} >
-        <AiOutlineArrowLeft class="arrows" style={{color:"white"}}/>
+        <AiOutlineArrowLeft class="arrows" style={{ color: "white" }} />
       </div>
     )
   };
 
-  function SampleNextArrow(props) {
+  const SampleNextArrow = (props) => {
     const { className, style, onClick } = props;
-    return(
+    return (
       <div onClick={onClick} className={`arrow ${className}`} >
-        <AiOutlineArrowRight class="arrows" style={{color:"white"}}/>
+        <AiOutlineArrowRight class="arrows" style={{ color: "white" }} />
       </div>
     )
   };
@@ -406,10 +374,10 @@ const Skills = () => {
   const settings = {
     dots: true,
     infinite: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    nextArrow: <SampleNextArrow to="next"/>,
+    speed: 800,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    nextArrow: <SampleNextArrow to="next" />,
     prevArrow: <SamplePrevArrow to="prev" />,
     responsive: [
       {
@@ -442,23 +410,38 @@ const Skills = () => {
     <>
       <ParallaxSection image={image}>
         <Container>
-        <Box sx={{ bgcolor: 'rgba(255, 255, 255, 0.2)', p: 2, borderRadius: 2, backdropFilter: 'blur(5px)' }}>
-          <Typography variant="h2" component="h1" sx={{ pt: 10, pb: 4, color: 'white', textAlign: 'center' }}>
-            Skills
-          </Typography>
-          <Typography variant="h6" component="p" sx={{ pt: 2, color: 'white', textAlign: 'center' }}>
-            Try clicking on a skill to see more information about my experience with it.
-          </Typography>
-        </Box>
-          <Box ref={tierListRef} sx={{ my: 4 }}>
+          <Box sx={{ bgcolor: 'rgba(255, 255, 255, 0.2)', p: 2, borderRadius: 2, backdropFilter: 'blur(5px)' }}>
+            <Typography variant="h1" component="h1" sx={{ pt: 10, pb: 4, color: 'white', textAlign: 'center' }}>
+              Skills
+            </Typography>
+          </Box>
+          <Box sx={{ my: 4 }}>
             {skillCategories.map((category, categoryIndex) => (
-              <Card key={categoryIndex} sx={{ marginBottom: '40px', background: 'rgba(0, 0, 0, 0.7)', backdropFilter: 'blur(5px)', borderRadius: '15px', overflow: 'visible' }}>
-                <CardContent sx={{ position: 'relative' }}>
-                  <Box sx={{ bgcolor: 'rgba(255, 255, 255, 0.2)', p: 2, borderRadius: 2, backdropFilter: 'blur(5px)' }}>
-                    <Typography variant="h4" component="h2" sx={{ mb: 2, color: 'white' }}>
-                      {category.category}
+              <Card key={categoryIndex} sx={{ display: 'flex', marginBottom: '40px', background: 'rgba(0, 0, 0, 0.7)', backdropFilter: 'blur(5px)', borderRadius: '15px', overflow: 'visible' }}>
+                <Box sx={{ width: '47%', p: 2, display: 'flex', flexDirection: 'column', justifyContent: 'center', bgcolor: 'rgba(255, 255, 255, 0.2)', borderRadius: 2, backdropFilter: 'blur(5px)' }}>
+                  <Typography variant="h4" component="h2" sx={{ mb: 2, color: 'white' }}>
+                    {category.category}
+                  </Typography>
+                  <Box sx={{ bgcolor: 'rgba(255, 255, 255, 0.2)', borderRadius: 2, backdropFilter: 'blur(5px)'  }}>
+                    <Typography variant="h6" component="h2" sx={{ mb: 2, color: 'red' }}>
+                      {selectedSkills[categoryIndex].title}
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: 'white' }}>
+                      {selectedSkills[categoryIndex].description}
                     </Typography>
                   </Box>
+                  <Typography variant="subtitle1" sx={{ mt: 2, color: 'red' }}>
+                    Places Used:
+                  </Typography>
+                  <ul>
+                    {selectedSkills[categoryIndex].places.map((place, index) => (
+                      <li key={index}>
+                        <Link to={place.link} style={{ color: 'white' }}>{place.name}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                </Box>
+                <CardContent sx={{ width: '53%' }}>
                   <Slider {...settings}>
                     {category.skills.map((skillIndex) => {
                       const skill = skillData[skillIndex];
@@ -474,7 +457,7 @@ const Skills = () => {
                             width: '150px',
                             margin: '10px'
                           }}
-                          onClick={() => handleClick(skillIndex)}
+                          onClick={() => handleSkillClick(categoryIndex, skillIndex)}
                         >
                           <Box
                             component="img"
