@@ -85,12 +85,31 @@ width:30px;
 
 .slick-prev::before,.slick-next::before{
    display:none;
-    
-    }
+}
 
 .arrows{
-height:20px;
-width:20px;
-margin: 1px;
+    height:20px;
+    width:20px;
+    margin: 1px;
+}
 
+.card-hover {
+    transition: all 0.3s ease-in-out;
+}
+
+.card-hover:hover {
+    box-shadow: 0 0 20px rgb(6, 12, 41);
+    background: rgba(6, 12, 41, 0.85);
+}
+
+.card-hover:hover .skill-title {
+    color: #ffffff;
+}
+
+.card-hover:hover .skill-subtitle {
+    color: #65c2ff;
+}
+
+.card-hover:hover .skill-box img {
+    border: 2px solid #ffffff;
 }

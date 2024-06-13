@@ -21,25 +21,25 @@ const ExperienceCard = ({ title, description, skills, link }) => {
   }, [link]);
 
   return (
-    <Card sx={{ mb: 4, bgcolor: 'rgba(0, 0, 0, 0.5)', color: 'white', backdropFilter: 'blur(5px)' }}>
+    <Card className="card-hover" sx={{ mb: 4, bgcolor: 'rgba(0, 0, 0, 0.8)', color: 'white', backdropFilter: 'blur(5px)' , borderRadius: '15px' }}>
       <CardContent id={link}>
         <Box sx={{ bgcolor: 'rgba(255, 255, 255, 0.2)', p: 2, borderRadius: 2, backdropFilter: 'blur(5px)' }}>
-          <Typography variant="h6" component="p" gutterBottom>
+          <Typography variant="h6" component="p" className="skill-title" color='gray' gutterBottom>
             {title}
           </Typography>
         </Box>
-        <Typography variant="body2" component="p" gutterBottom sx={{ mt: 2 }}>
+        <Typography variant="body2" className="skill-title" color='gray' component="p" gutterBottom sx={{ mt: 2 }}>
           {description}
         </Typography>
         {skills && (
           <>
-            <Typography variant="h6" component="p" gutterBottom sx={{ mt: 2 }}>
+            <Typography variant="h6" component="p" className="skill-title" color='gray' gutterBottom sx={{ mt: 2 }}>
               Skills Used:
             </Typography>
             <Grid container spacing={1}>
               {skills.map((skill, index) => (
                 <Grid item key={index}>
-                  <Chip label={skill} sx={{ color: 'white', bgcolor: 'rgba(255, 255, 255, 0.2)' }} />
+                  <Chip label={skill} className="skill-subtitle" sx={{ color: 'white', bgcolor: 'rgba(255, 255, 255, 0.2)' }} />
                 </Grid>
               ))}
             </Grid>
@@ -96,20 +96,12 @@ const Experience = () => {
   return (
     <>
       <ParallaxSection image={image}>
-        <Typography
-          variant="h2"
-          component="h1"
-          align="center"
-          gutterBottom
-          sx={{
-            color: 'white',
-            mb: 4,
-            fontSize: { xs: '2rem', md: '3rem' },
-          }}
-        >
-          Experience
-        </Typography>
         <Container>
+          <Box sx={{ bgcolor: 'rgba(255, 255, 255, 0.2)', p: 2, borderRadius: 2, backdropFilter: 'blur(5px)' }}>
+              <Typography variant="h1" component="h1" sx={{ pt: 10, pb: 4, color: 'white', textAlign: 'center' }}>
+                Experience
+            </Typography>
+          </Box>
           <Box sx={{ my: 4 }}>
             {experienceData.map((experience, index) => (
               <ExperienceCard

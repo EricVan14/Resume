@@ -417,26 +417,26 @@ const Skills = () => {
           </Box>
           <Box sx={{ my: 4 }}>
             {skillCategories.map((category, categoryIndex) => (
-              <Card key={categoryIndex} sx={{ display: 'flex', marginBottom: '40px', background: 'rgba(0, 0, 0, 0.7)', backdropFilter: 'blur(5px)', borderRadius: '15px', overflow: 'visible' }}>
+              <Card key={categoryIndex} className="card-hover" sx={{ display: 'flex', marginBottom: '40px', background: 'rgba(0, 0, 0, 0.8)', backdropFilter: 'blur(5px)', borderRadius: '15px', overflow: 'visible' }}>
                 <Box sx={{ width: '47%', p: 2, display: 'flex', flexDirection: 'column', justifyContent: 'center', bgcolor: 'rgba(255, 255, 255, 0.2)', borderRadius: 2, backdropFilter: 'blur(5px)' }}>
-                  <Typography variant="h4" component="h2" sx={{ mb: 2, color: 'white' }}>
+                  <Typography variant="h4" component="h2" className="skill-title" sx={{ mb: 2, color: 'gray' }}>
                     {category.category}
                   </Typography>
                   <Box sx={{ bgcolor: 'rgba(255, 255, 255, 0.2)', borderRadius: 2, backdropFilter: 'blur(5px)'  }}>
-                    <Typography variant="h6" component="h2" sx={{ mb: 2, color: 'red' }}>
+                    <Typography variant="h6" component="h2" className='skill-subtitle' sx={{ mb: 2, color: '#1772da' , margin: '5px'}}>
                       {selectedSkills[categoryIndex].title}
                     </Typography>
-                    <Typography variant="body2" sx={{ color: 'white' }}>
+                    <Typography variant="body2" sx={{ color: 'white' , margin: '5px'}}>
                       {selectedSkills[categoryIndex].description}
                     </Typography>
                   </Box>
-                  <Typography variant="subtitle1" sx={{ mt: 2, color: 'red' }}>
+                  <Typography variant="subtitle1" className='skill-subtitle' sx={{ mt: 2, color: '#1772da' , margin: '5px'}}>
                     Places Used:
                   </Typography>
                   <ul>
                     {selectedSkills[categoryIndex].places.map((place, index) => (
                       <li key={index}>
-                        <Link to={place.link} style={{ color: 'white' }}>{place.name}</Link>
+                        <Link to={place.link} style={{ color: 'white' , margin: '5px'}}>{place.name}</Link>
                       </li>
                     ))}
                   </ul>

@@ -22,19 +22,20 @@ const ProjectCard = ({ title, description, skills, link }) => {
   }, [link]);
 
   return (
-    <Card sx={{ mb: 4, bgcolor: 'rgba(0, 0, 0, 0.5)', color: 'white', backdropFilter: 'blur(5px)' }}>
+    <Card className="card-hover" sx={{ mb: 4, bgcolor: 'rgba(0, 0, 0, 0.8)', color: 'white', backdropFilter: 'blur(5px)', borderRadius: '15px' }}>
       <CardContent id={link}>
         <Box sx={{ bgcolor: 'rgba(255, 255, 255, 0.2)', p: 2, borderRadius: 2, backdropFilter: 'blur(5px)' }}>
-          <Typography variant="h6" component="p" gutterBottom>
+          <Typography variant="h6" component="p" color="gray" className="skill-title" gutterBottom>
             {title}
           </Typography>
         </Box>
         <Box sx={{ mt: 2 }}>
           <Button
             onClick={() => setShowInfo(!showInfo)}
+            className="skill-title"
             sx={{
               mb: 2,
-              color: 'white',
+              color: 'gray',
               backgroundColor: 'rgba(255, 255, 255, 0.2)',
               backdropFilter: 'blur(5px)',
               fontSize: { xs: '0.75rem', md: '1rem' },
@@ -51,13 +52,13 @@ const ProjectCard = ({ title, description, skills, link }) => {
             {description}
           </Typography>
         )}
-        <Typography variant="h6" component="p" gutterBottom sx={{ mt: 2 }}>
+        <Typography variant="h6" className="skill-title" component="p" gutterBottom sx={{ mt: 2, color: 'gray'}}>
           Skills Used:
         </Typography>
         <Grid container spacing={1}>
           {skills.map((skill, index) => (
             <Grid item key={index}>
-              <Chip label={skill} sx={{ color: 'white', bgcolor: 'rgba(255, 255, 255, 0.2)' }} />
+              <Chip label={skill} className="skill-subtitle" sx={{ color: 'white', bgcolor: 'rgba(255, 255, 255, 0.2)' }} />
             </Grid>
           ))}
         </Grid>
@@ -205,10 +206,12 @@ const Projects = () => {
   return (
     <>
       <ParallaxSection image={image}>
-        <Typography variant="h2" component="h1" align="center" gutterBottom sx={{ color: 'white', mb: 4 }}>
-          Projects
-        </Typography>
         <Container>
+          <Box sx={{ bgcolor: 'rgba(255, 255, 255, 0.2)', p: 2, borderRadius: 2, backdropFilter: 'blur(5px)' }}>
+            <Typography variant="h1" component="h1" sx={{ pt: 10, pb: 4, color: 'white', textAlign: 'center' }}>
+              Projects
+            </Typography>
+          </Box>
           <Box sx={{ my: 4 }}>
             {projectData.map((project, index) => (
               <ProjectCard

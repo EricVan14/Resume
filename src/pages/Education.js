@@ -11,14 +11,14 @@ import image from '../assets/pics/arsenalAVIF.avif';
 
 const EducationCard = ({ title, period, institution, courses, showCourses, setShowCourses, link }) => {
   return (
-    <Card sx={{ mb: 4, bgcolor: 'rgba(0, 0, 0, 0.5)', color: 'white', backdropFilter: 'blur(5px)' , borderRadius: '15px'}}>
+    <Card className="card-hover" sx={{ mb: 4, bgcolor: 'rgba(0, 0, 0, 0.8)', color: 'white', backdropFilter: 'blur(5px)' , borderRadius: '15px'}}>
       <CardContent>
         <Box sx={{ bgcolor: 'rgba(255, 255, 255, 0.2)', p: 2, borderRadius: 2, backdropFilter: 'blur(5px)' }}>
-          <Typography variant="h6" component="p" gutterBottom id={link}>
+          <Typography className="skill-title" variant="h6" component="p" color='gray' gutterBottom id={link}>
             {title}
           </Typography>
         </Box>
-        <Typography variant="body2" component="p" gutterBottom sx={{ mt: 2 }}>
+        <Typography variant="body2" component="p" className="skill-subtitle" gutterBottom sx={{ mt: 2 }}>
           {period}
           <br />
           {institution}
@@ -27,9 +27,10 @@ const EducationCard = ({ title, period, institution, courses, showCourses, setSh
           <>
             <Button
               onClick={setShowCourses}
+              className="skill-title"
               sx={{
                 mb: 2,
-                color: 'white',
+                color: 'gray',
                 backgroundColor: 'rgba(255, 255, 255, 0.2)',
                 backdropFilter: 'blur(5px)',
                 fontSize: { xs: '0.75rem', md: '1rem' },
@@ -123,19 +124,12 @@ const Education = () => {
   return (
     <>
       <ParallaxSection image={image}>
-        <Typography
-          variant="h2"
-          component="h1"
-          sx={{
-            color: 'white',
-            textAlign: 'center',
-            mb: 4,
-            fontSize: { xs: '2rem', md: '3rem' },
-          }}
-        >
-          Education
-        </Typography>
         <Container>
+          <Box sx={{ bgcolor: 'rgba(255, 255, 255, 0.2)', p: 2, borderRadius: 2, backdropFilter: 'blur(5px)' }}>
+              <Typography variant="h1" component="h1" sx={{ pt: 10, pb: 4, color: 'white', textAlign: 'center' }}>
+                Education
+            </Typography>
+          </Box>
           <Box sx={{ my: 4 }}>
             <EducationCard
               title="Bachelor of Science, Major in Computer Science"
