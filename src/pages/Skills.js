@@ -426,7 +426,7 @@ const Skills = () => {
                     <Typography variant="h6" component="h2" className='skill-subtitle' sx={{ mb: 2, color: '#1772da' , margin: '5px'}}>
                       {selectedSkills[categoryIndex].title}
                     </Typography>
-                    <Typography variant="body2" sx={{ color: 'white' , margin: '5px'}}>
+                    <Typography variant="body2" className="skill-title" sx={{ color: 'darkgray' , margin: '5px'}}>
                       {selectedSkills[categoryIndex].description}
                     </Typography>
                   </Box>
